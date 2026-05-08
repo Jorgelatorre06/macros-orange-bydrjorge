@@ -6,76 +6,109 @@
 
 <title>Macros Orange</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    margin:0;
-    padding:0;
-    background:#0f0f0f;
-    font-family:Arial, sans-serif;
-    color:white;
+background:#0b0f1a;
+color:white;
+padding:20px;
 }
 
-header{
-    background:linear-gradient(90deg,#ff7b00,#ff9500);
-    padding:30px;
-    text-align:center;
-    box-shadow:0 0 20px orange;
+.top{
+width:100%;
+background:linear-gradient(135deg,#ff8800,#ff5e00);
+padding:25px;
+border-radius:25px;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(255,136,0,0.3);
 }
 
-header h1{
-    margin:0;
-    font-size:35px;
-    color:white;
-    text-shadow:0 0 10px black;
+.top h1{
+font-size:28px;
+font-weight:700;
 }
 
-.sub{
-    margin-top:10px;
-    font-size:18px;
+.top p{
+margin-top:8px;
+opacity:0.9;
 }
 
-.container{
-    padding:20px;
+.search{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:15px;
+background:#151c2f;
+color:white;
+font-size:15px;
+margin-bottom:25px;
 }
 
-.box{
-    background:#1b1b1b;
-    border-left:5px solid orange;
-    margin-bottom:15px;
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(255,140,0,0.3);
-    transition:0.3s;
+.card{
+background:#131a2c;
+border-radius:20px;
+padding:18px;
+margin-bottom:18px;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+border:1px solid rgba(255,255,255,0.03);
+transition:0.3s;
 }
 
-.box:hover{
-    transform:scale(1.02);
-    box-shadow:0 0 20px orange;
+.card:hover{
+transform:translateY(-3px);
 }
 
-.copy-btn{
-    margin-top:10px;
-    background:orange;
-    border:none;
-    padding:10px 15px;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
+.text{
+font-size:15px;
+line-height:1.5;
+margin-bottom:15px;
+color:#e8e8e8;
 }
 
-.copy-btn:hover{
-    background:#ffb347;
+.copy{
+width:100%;
+padding:13px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#ff8800,#ff5e00);
+color:white;
+font-weight:600;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
-    background:#111;
-    color:orange;
-    font-weight:bold;
-    font-size:18px;
+.copy:hover{
+opacity:0.9;
+}
+
+.footer{
+margin-top:35px;
+text-align:center;
+opacity:0.7;
+font-size:14px;
+}
+
+.glow{
+position:fixed;
+width:300px;
+height:300px;
+background:orange;
+filter:blur(140px);
+opacity:0.15;
+top:-100px;
+right:-100px;
+z-index:-1;
 }
 
 </style>
@@ -83,157 +116,125 @@ footer{
 
 <body>
 
-<header>
-    <h1>MACROS DE LA FRACCIÓN MÉDICA ORANGE 🟠</h1>
-    <div class="sub">Copiar y pegar rápidamente</div>
-</header>
+<div class="glow"></div>
 
-<div class="container">
-
-<div class="box">
-<p>/do ¡TÁSER! ¡TÁSER! ¡TÁSER! PARA ESCAPAR DEL PELIGRO</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
+<div class="top">
+<h1>🟠 MACROS DE LA FRACCIÓN MÉDICA ORANGE</h1>
+<p>Macros rápidas para copiar y pegar</p>
 </div>
 
-<div class="box">
-<p>/do TÁSER TÁSER DE ENTRENAMIENTO</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
+<input type="text" class="search" placeholder="Buscar macro..." onkeyup="buscarMacro()">
 
-<div class="box">
-<p>/flobby Preparando vehículo médico.</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/me Se activan sirenas y la unidad inicia desplazamiento en ruta a una llamada de emergencia.</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/me Emergencia médica de ORANGE en lugar. Mantenga la calma y despeje el área</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/do Se procede a la aplicación de botiquín y prestación de primeros auxilios</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/do Administrar Medicamentos a Pacientes</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby (Código verde) Todas las llamadas de emergencia resueltas</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/me Los Médicos no te ayudarán durante una balacera o en una zona de riesgo</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/me ME PRESENTO ANTE UD. [RANGO],[NOMBRE] SERVICIOS MÉDICOS ORANGE</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby (10-8) En Servicio Laboral</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby (10-7) Fuera de Servicio</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby (10-4) Entendido o De Acuerdo</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby En Camino a localización de entrega medicamentos.</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby Ignorar lo anunciado o lo siguiente.</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/do MI CÁMARA CORPORAL ESTÁ GRABANDO</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/do SI YA FUE CURADO, POR FAVOR RETIRESE DEL HOSPITAL.</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/do NO PODEMOS ATENDER PACIENTES CON ARMAS EN EL HOSPITAL POR FAVOR GUARDE SU ARMA.</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby [CÓDIGO AZUL] SOLICITO APOYO POLICIAL EN EL HOSPITAL</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby PISO 2 CERRADO FAVOR DE NO SUBIR, REPRIMENDA POR MD 4.2 EN CASO DE INCUMPLIMIENTO</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby ENTRENANDO A NUEVO ENFERMERO ROL/MACROS/TAREAS</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby SOLICITO PERSONAL EN LOS MOSTRADORES POR FAVOR</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby SOLICITO UN ENTRENADOR PARA HACER RCP</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/me DISCULPEN SI NO TENEMOS PASTILLAS O BOTIQUINES, DEBEMOS ESPERAR PARA RECARGAR</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
-
-<div class="box">
-<p>/flobby UNIFORMES VERDES, BLANCOS Y AZULES POR FAVOR DETRÁS DE MOSTRADOR</p>
-<button class="copy-btn" onclick="copyText(this)">COPIAR</button>
-</div>
+<div id="macros">
 
 </div>
 
-<footer>
-CREADO POR DR. JORGE 🩺
-</footer>
+<div class="footer">
+🩺 CREADO POR DR. JORGE
+</div>
 
 <script>
 
-function copyText(button){
+const macros = [
 
-    let text = button.parentElement.querySelector("p").innerText;
+"/do ¡TÁSER! ¡TÁSER! ¡TÁSER! PARA ESCAPAR DEL PELIGRO",
 
-    navigator.clipboard.writeText(text);
+"/do TÁSER TÁSER DE ENTRENAMIENTO",
 
-    button.innerText = "COPIADO ✅";
+"/flobby Preparando vehículo médico.",
 
-    setTimeout(()=>{
-        button.innerText = "COPIAR";
-    },2000);
+"/me Se activan sirenas y la unidad inicia desplazamiento en ruta a una llamada de emergencia.",
+
+"/me Emergencia médica de ORANGE en lugar. Mantenga la calma y despeje el área",
+
+"/do Se procede a la aplicación de botiquín y prestación de primeros auxilios",
+
+"/do Administrar Medicamentos a Pacientes",
+
+"/flobby (Código verde) Todas las llamadas de emergencia resueltas",
+
+"/me Los Médicos no te ayudarán durante una balacera o en una zona de riesgo",
+
+"/me ME PRESENTO ANTE UD. [RANGO],[NOMBRE] SERVICIOS MÉDICOS ORANGE",
+
+"/flobby (10-8) En Servicio Laboral",
+
+"/flobby (10-7) Fuera de Servicio",
+
+"/flobby (10-4) Entendido o De Acuerdo",
+
+"/flobby En Camino a localización de entrega medicamentos.",
+
+"/flobby Ignorar lo anunciado o lo siguiente.",
+
+"/do MI CÁMARA CORPORAL ESTÁ GRABANDO",
+
+"/do SI YA FUE CURADO, POR FAVOR RETIRESE DEL HOSPITAL.",
+
+"/do NO PODEMOS ATENDER PACIENTES CON ARMAS EN EL HOSPITAL POR FAVOR GUARDE SU ARMA.",
+
+"/flobby [CÓDIGO AZUL] SOLICITO APOYO POLICIAL EN EL HOSPITAL",
+
+"/flobby PISO 2 CERRADO FAVOR DE NO SUBIR, REPRIMENDA POR MD 4.2 EN CASO DE INCUMPLIMIENTO",
+
+"/flobby ENTRENANDO A NUEVO ENFERMERO ROL/MACROS/TAREAS",
+
+"/flobby SOLICITO PERSONAL EN LOS MOSTRADORES POR FAVOR",
+
+"/flobby SOLICITO UN ENTRENADOR PARA HACER RCP",
+
+"/me DISCULPEN SI NO TENEMOS PASTILLAS O BOTIQUINES, DEBEMOS ESPERAR PARA RECARGAR",
+
+"/flobby UNIFORMES VERDES, BLANCOS Y AZULES POR FAVOR DETRÁS DE MOSTRADOR"
+
+];
+
+const container = document.getElementById("macros");
+
+function mostrarMacros(lista){
+
+container.innerHTML="";
+
+lista.forEach(texto=>{
+
+container.innerHTML += `
+
+<div class="card">
+
+<div class="text">${texto}</div>
+
+<button class="copy" onclick="copiarTexto('${texto.replace(/'/g,"\\'")}')">
+
+COPIAR MACRO
+
+</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+mostrarMacros(macros);
+
+function copiarTexto(texto){
+
+navigator.clipboard.writeText(texto);
+
+alert("Macro copiada ✅");
+
+}
+
+function buscarMacro(){
+
+const input = document.querySelector(".search").value.toLowerCase();
+
+const filtradas = macros.filter(m=>m.toLowerCase().includes(input));
+
+mostrarMacros(filtradas);
+
 }
 
 </script>
