@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Macros Orange</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,74 +17,85 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0b0f1a;
-color:white;
+background:#f8f8f8;
 padding:20px;
+color:#333;
 }
 
 .top{
-width:100%;
-background:linear-gradient(135deg,#ff8800,#ff5e00);
-padding:25px;
+background:linear-gradient(135deg,#ff8c00,#ff6b00);
+padding:30px;
 border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(255,140,0,0.25);
 margin-bottom:25px;
-box-shadow:0 10px 30px rgba(255,136,0,0.3);
+}
+
+.logo{
+font-size:55px;
+margin-bottom:10px;
 }
 
 .top h1{
+color:white;
 font-size:28px;
 font-weight:700;
+margin-bottom:8px;
 }
 
 .top p{
-margin-top:8px;
-opacity:0.9;
+color:white;
+opacity:0.95;
 }
 
-.search{
-width:100%;
-padding:15px;
-border:none;
-outline:none;
-border-radius:15px;
-background:#151c2f;
-color:white;
-font-size:15px;
+.search-box{
+position:relative;
 margin-bottom:25px;
 }
 
-.card{
-background:#131a2c;
-border-radius:20px;
-padding:18px;
-margin-bottom:18px;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
-border:1px solid rgba(255,255,255,0.03);
-transition:0.3s;
+.search-box input{
+width:100%;
+padding:16px 16px 16px 50px;
+border:none;
+border-radius:18px;
+font-size:15px;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+outline:none;
 }
 
-.card:hover{
-transform:translateY(-3px);
+.search-icon{
+position:absolute;
+left:18px;
+top:15px;
+font-size:18px;
+opacity:0.6;
+}
+
+.card{
+background:white;
+padding:18px;
+border-radius:20px;
+margin-bottom:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .text{
 font-size:15px;
-line-height:1.5;
+line-height:1.6;
 margin-bottom:15px;
-color:#e8e8e8;
 }
 
 .copy{
 width:100%;
-padding:13px;
+padding:14px;
 border:none;
-border-radius:12px;
-background:linear-gradient(135deg,#ff8800,#ff5e00);
+border-radius:14px;
+background:linear-gradient(135deg,#ff8c00,#ff6b00);
 color:white;
 font-weight:600;
-font-size:14px;
 cursor:pointer;
-transition:0.3s;
+font-size:14px;
 }
 
 .copy:hover{
@@ -93,44 +103,48 @@ opacity:0.9;
 }
 
 .footer{
-margin-top:35px;
 text-align:center;
-opacity:0.7;
-font-size:14px;
+margin-top:30px;
+font-size:12px;
+color:#777;
 }
 
-.glow{
+.toast{
 position:fixed;
-width:300px;
-height:300px;
-background:orange;
-filter:blur(140px);
-opacity:0.15;
-top:-100px;
-right:-100px;
-z-index:-1;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#ff7b00;
+color:white;
+padding:12px 20px;
+border-radius:12px;
+display:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 </style>
 </head>
-
 <body>
 
-<div class="glow"></div>
-
 <div class="top">
-<h1>🟠 MACROS DE LA FRACCIÓN MÉDICA ORANGE</h1>
+<div class="logo">🍊</div>
+<h1>MACROS DE LA FRACCIÓN MÉDICA ORANGE</h1>
 <p>Macros rápidas para copiar y pegar</p>
 </div>
 
-<input type="text" class="search" placeholder="Buscar macro..." onkeyup="buscarMacro()">
-
-<div id="macros">
-
+<div class="search-box">
+<div class="search-icon">🔍</div>
+<input type="text" placeholder="Buscar macro..." onkeyup="buscarMacro()">
 </div>
 
+<div id="macros"></div>
+
 <div class="footer">
-🩺 CREADO POR DR. JORGE
+🩺 CREADO POR DR. JORGE • Discord: cocoa126
+</div>
+
+<div id="toast" class="toast">
+✅ Macro copiada
 </div>
 
 <script>
@@ -155,7 +169,7 @@ const macros = [
 
 "/me Los Médicos no te ayudarán durante una balacera o en una zona de riesgo",
 
-"/me ME PRESENTO ANTE UD. [RANGO],[NOMBRE] SERVICIOS MÉDICOS ORANGE",
+"/me ME PRESENTO ANTE UD. [RANGO],[ NOMBRE] SERVICIOS MÉDICOS ORANGE",
 
 "/flobby (10-8) En Servicio Laboral",
 
@@ -163,29 +177,31 @@ const macros = [
 
 "/flobby (10-4) Entendido o De Acuerdo",
 
+"/do MI CÁMARA CORPORAL ESTÁ GRABANDO",
+
+"/flobby [UNIDAD MEDICA MOVIL] PREPARANDO VEHICULO MÉDICO, CARGANDO SUMINISTROS, EN RUTA A PUNTO DE ENTREGA.",
+
+"/flobby [UNIDAD MEDICA MOVIL] EN PUNTO DE ENTREGA.",
+
+"/flobby [UNIDAD MEDICA MOVIL] SE ATIENDE LLAMADA DE EMERGENCIA.",
+
+"/flobby [UNIDAD MEDICA MOVIL] FINALIZANDO ENTREGA, DE REGRESO A GARAJE MEDICO.",
+
 "/flobby En Camino a localización de entrega medicamentos.",
 
 "/flobby Ignorar lo anunciado o lo siguiente.",
 
-"/do MI CÁMARA CORPORAL ESTÁ GRABANDO",
+"/flobby ENTRENANDO A NUEVO ENFERMERO ROL/MACROS/TAREAS",
 
 "/do SI YA FUE CURADO, POR FAVOR RETIRESE DEL HOSPITAL.",
 
 "/do NO PODEMOS ATENDER PACIENTES CON ARMAS EN EL HOSPITAL POR FAVOR GUARDE SU ARMA.",
 
-"/flobby [CÓDIGO AZUL] SOLICITO APOYO POLICIAL EN EL HOSPITAL",
-
-"/flobby PISO 2 CERRADO FAVOR DE NO SUBIR, REPRIMENDA POR MD 4.2 EN CASO DE INCUMPLIMIENTO",
-
-"/flobby ENTRENANDO A NUEVO ENFERMERO ROL/MACROS/TAREAS",
-
-"/flobby SOLICITO PERSONAL EN LOS MOSTRADORES POR FAVOR",
-
 "/flobby SOLICITO UN ENTRENADOR PARA HACER RCP",
 
 "/me DISCULPEN SI NO TENEMOS PASTILLAS O BOTIQUINES, DEBEMOS ESPERAR PARA RECARGAR",
 
-"/flobby UNIFORMES VERDES, BLANCOS Y AZULES POR FAVOR DETRÁS DE MOSTRADOR"
+"/flobby [CÓDIGO AZUL] SOLICITO APOYO POLICIAL EN EL HOSPITAL"
 
 ];
 
@@ -200,15 +216,10 @@ lista.forEach(texto=>{
 container.innerHTML += `
 
 <div class="card">
-
 <div class="text">${texto}</div>
-
-<button class="copy" onclick="copiarTexto('${texto.replace(/'/g,"\\'")}')">
-
+<button class="copy" onclick="copiarTexto(\`${texto}\`)">
 COPIAR MACRO
-
 </button>
-
 </div>
 
 `;
@@ -223,15 +234,23 @@ function copiarTexto(texto){
 
 navigator.clipboard.writeText(texto);
 
-alert("Macro copiada ✅");
+const toast = document.getElementById("toast");
+
+toast.style.display="block";
+
+setTimeout(()=>{
+toast.style.display="none";
+},2000);
 
 }
 
 function buscarMacro(){
 
-const input = document.querySelector(".search").value.toLowerCase();
+const valor = document.querySelector("input").value.toLowerCase();
 
-const filtradas = macros.filter(m=>m.toLowerCase().includes(input));
+const filtradas = macros.filter(
+m => m.toLowerCase().includes(valor)
+);
 
 mostrarMacros(filtradas);
 
